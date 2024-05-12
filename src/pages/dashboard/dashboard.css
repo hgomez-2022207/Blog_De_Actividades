@@ -37,3 +37,32 @@
     height: 40px; 
     transition: background-color 0.3s ease;
 }
+
+.cards-container {
+    display: flex; 
+    justify-content: space-between; 
+    background-color: #000;
+    border: 1px solid #000;
+}
+
+.card {
+    width: 190px;
+    height: 254px;
+    border-radius: 20px;
+    padding: 5px;
+    box-shadow: #000;
+    background-image: linear-gradient(144deg,#fff, #222 50%,#000);
+    align-items: center;
+  }
+  
+  .card__content {
+    background: #fff;
+    border-radius: 17px;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    display: flex; /* Usamos flexbox */
+    justify-content: center;
+    align-items: center;
+    color: #000;
+  }
