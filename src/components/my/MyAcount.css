@@ -1,0 +1,51 @@
+.center-container{
+    display: flex;
+    margin: 10vh;
+    margin: 5px solid #fff;
+    width: 100%;
+}
+
+img{
+    width: 30vh;
+    height: 30vh;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 5vh;
+}
+
+article{
+    width: 80%;
+    border-right: 3px solid black;
+    width: 100%;
+}
+
+section{
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    max-width: 100vh;
+    max-height: 100vh;
+    margin: 0 auto;
+}
+
+.conten-info img {
+    max-width: 100%; /* La imagen se ajusta al ancho del contenedor padre */
+    height: auto; /* La altura se ajusta automáticamente para mantener la proporción */
+}
+
+
+.conten-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: aliceblue;
+    border: 1px solid aliceblue;
+    font-size: 1vh;
+}
+
+p{
+    font-size: large;
+    padding: 10vh;
+}
