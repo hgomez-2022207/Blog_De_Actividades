@@ -2,12 +2,12 @@
     width: 100%;
     background-color: #fff;
     color: #2222;
-    border: 2px solid aliceblue; /* Aumenta el grosor del borde */
-    box-sizing: border-box; /* Asegura que el ancho total incluya el borde */
-    position: fixed; /* Fija la barra de navegación en la parte superior de la página */
-    top: 0; /* Coloca la barra de navegación en la parte superior */
+    border: 2px solid aliceblue;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
     left: 0;
-    z-index: 999; /* Asegura que la barra de navegación esté por encima de otros elementos */
+    z-index: 999;
     display: flex;
     justify-content: flex-end;
 }
