@@ -1,8 +1,39 @@
-.dashboard-container{
-    position: relative;
-    height: 100vh;
-    width: 200vh;
-    align-content: center;
-    background-color:  white;
-    display: table;
+.nav-container {
+    width: 100%;
+    background-color: #fff;
+    color: #000;
+    border-bottom: 2px solid #fff;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.nav-buttons-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+
+.nav-button {
+    background-color: transparent;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    margin: 1vh;
+    width: 15vh;
+    height: 40px; 
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #000;
+    color:#fff;
+    border: none;
+    cursor: pointer;
+    width: 15vh;
+    height: 40px; 
+    transition: background-color 0.3s ease;
 }

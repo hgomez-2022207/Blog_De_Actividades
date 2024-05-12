@@ -1,15 +1,15 @@
-import React, {useState, useEfect} from "react";
-import { TaskWOrk } from '../../components/TaskWork'
+import {useState, useEfect} from "react";
+import { Navbar } from "../../components/navar/Navar";
 import './dashboard.css'
 
 export const Dashboard = () => {
 
-    const [showAddTask, setShowAddTask] = useState(false)
+    const [showAddTask] = useState(false)
 
     return(
         <div className="dashboard-container">
             {!showAddTask && (
-                <TaskWOrk /> 
+                <Navbar /> 
             )}
         </div>
     )
