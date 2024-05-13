@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import './TaskComments.css'
 
 export const TaskComments = ({comments}) => {
 
