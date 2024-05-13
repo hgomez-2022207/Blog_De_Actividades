@@ -7,7 +7,7 @@ import { TaskComments } from "../../components/comments/TaskComments";
 export const Dashboard = () => {
 
     const [showAddContent] = useState(false)
-    const [comments, setComment] = useState({ comm: [] });
+    const [comments, setComment] = useState({ com: [] });
 
     console.log('dash',comments)
     useEffect(() => {
@@ -103,7 +103,7 @@ export const Dashboard = () => {
                 </div>
             </div>
             {!showAddContent && (
-                <TaskComments comments={comments.comm} /> 
+                <TaskComments comments={comments.com} /> 
             )}
         </div>
     )
