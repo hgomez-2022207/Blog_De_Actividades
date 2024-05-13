@@ -1,18 +1,38 @@
-import {useState, useEfect} from "react";
+import {useState, useEffect} from "react";
 import { Navbar } from "../../components/navar/Navar";
 import './dashboard.css'
+import { getComment } from "../../services/";
+import { TaskComments } from "../../components/comments/TaskComments";
 
 export const Dashboard = () => {
 
-    const [showAddTask] = useState(false)
+    const [showAddContent] = useState(false)
+    const [comments, setComment] = useState({ com: [] });
+
+    useEffect(() => {
+        const fetchComment = async () => {
+          try {
+            const response = await getComment();
+            if (!response.error) {
+              setComment(response.data || { com: [] });
+            } else {
+              console.error('Error al cargar los comentarios:', response.error);
+            }
+          } catch (error) {
+            console.error('Error al cargar los comentarios:', error);
+          }
+        };
+        fetchComment();
+      }, []);
 
     return(
         <div className="dashboard-container">
-            {!showAddTask && (
+            {!showAddContent && (
                 <Navbar /> 
             )}
+            <h1>Taller</h1>
             <div className="cards-container">
-                <h1>Taller</h1>
+                
                 <br />
                 <div class="card">
                     <div class="card__content">
@@ -50,8 +70,9 @@ export const Dashboard = () => {
                     </div>
                 </div>
             </div>
+            <h1>Practica Supervisada</h1>
             <div className="cards-container">
-                <h1>Practica Supervisada</h1>
+                
                 <br />
                 <div class="card">
                     <div class="card__content">
@@ -80,6 +101,9 @@ export const Dashboard = () => {
                     </div>
                 </div>
             </div>
+            {!showAddContent && (
+                <TaskComments comments={comments.com} /> 
+            )}
         </div>
     )
 }
