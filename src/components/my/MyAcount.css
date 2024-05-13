@@ -29,8 +29,8 @@ section{
 }
 
 .conten-info img {
-    max-width: 100%; /* La imagen se ajusta al ancho del contenedor padre */
-    height: auto; /* La altura se ajusta automáticamente para mantener la proporción */
+    max-width: 100%;
+    height: auto;
 }
 
 
