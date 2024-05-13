@@ -17,19 +17,20 @@ export const Navbar = () => {
         navigate('/my')
     }
 
-    const handleNavigateToWorksPage = () => {
+    /*const handleNavigateToWorksPage = () => {
         navigate('/comments')
-    }
+        
+                <button className='nav-button' text='' onClick={handleNavigateToWorksPage}>Comments</button>
+    }*/
 
     const handleNavigateToAddComment = () => {
-        navigate('/add')
+        navigate('/comments')
     }
 
     return(
         <div className="nav-container">
-                <button className='nav-button' text='' onClick={handleNavigateToAddComment}>Browse</button>
+                <button className='nav-button' text='' onClick={handleNavigateToAddComment}>Add comment</button>
                 <button className='nav-button' text='' onClick={handleNavigateAboutMe}>More about me</button>
-                <button className='nav-button' text='' onClick={handleNavigateToWorksPage}>My works</button>
         </div>
     )
 }
