@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const apiClient = axios.create({
-    baseURL: 'http://127.0.0.1:8080/twitch/v1',
+    baseURL: 'http://localhost:8080/apiBlog/v1/',
     timeout: 5000
 })
 
@@ -16,8 +16,7 @@ export const addComment = async (data) => {
     }
 }
 
-export const getComment = async (comments) => {
-    console.log
+export const getComment = async () => {
     try {
         return await apiClient.get('/comment')
     } catch (e) {
