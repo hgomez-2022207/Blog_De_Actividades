@@ -38,6 +38,7 @@ export const Dashboard = () => {
                 <div className="card">
                     <div className="card__content">
                         <span color="white"><a href="https://github.com/hgomez-2022207/Taller_Laboratorio_1.git">BI Mas sobre mi</a></span>
+                        <p>Un pequeño repaso de lo que vimos el año pasado</p>
                     </div>
                 </div>
                 <div className="card">
