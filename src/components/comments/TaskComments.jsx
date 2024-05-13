@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './TaskComments.css'
 
 export const TaskComments = ({comments}) => {
 
@@ -12,16 +13,17 @@ export const TaskComments = ({comments}) => {
             </thead>
             <tbody>
                 {comments && comments.length > 0 ? (
-                    comments.map((comment, index) => (
-                    comment.estado !== "false" && (
+                    comments.map((comm, index) => (
+                        console.log('Comentario completo:', comm),
+                    comm.estado !== "false" && (
                         <tr key={index}>
-                            <td>{comment.name}</td>
-                            <td>{comment.comment}</td>
+                            <td>{comm.name}</td>
+                            <td>{comm.comment}</td>
                         </tr>
-                    ),
-                    console.log(comments)
+                    )
                     ))
                 ) : (
+                    
                     <tr>
                         <td colSpan="2" className="no-comments">No hay comentarios disponibles</td>
                     </tr>
