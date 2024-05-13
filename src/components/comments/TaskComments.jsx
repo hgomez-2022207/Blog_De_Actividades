@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import './TaskComments.css'
 
 export const TaskComments = ({comments}) => {
-
+    console.log('Comentario completo:', comments)
     return(
         <table className="comment-table">
             <thead>
@@ -14,7 +14,6 @@ export const TaskComments = ({comments}) => {
             <tbody>
                 {comments && comments.length > 0 ? (
                     comments.map((comm, index) => (
-                        console.log('Comentario completo:', comm),
                     comm.estado !== "false" && (
                         <tr key={index}>
                             <td>{comm.name}</td>
