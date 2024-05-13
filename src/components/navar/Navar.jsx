@@ -18,7 +18,7 @@ export const Navbar = () => {
     }
 
     const handleNavigateToWorksPage = () => {
-        navigate('/works')
+        navigate('/comments')
     }
 
     const handleNavigateToAddComment = () => {
