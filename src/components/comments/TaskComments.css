@@ -8,6 +8,7 @@
     padding: 4px;
     width: 60vh;
     border-radius: 13vh;
+    margin: 4vh;
 }
 
 .comment-table tr, .task-table td {
@@ -19,6 +20,10 @@
     text-align: center;
     padding: 1vh;
     margin: 1vh;
+}
+
+.comment-table tr {
+    border-bottom: 1px solid #fff;
 }
 
 .comment-table th {
