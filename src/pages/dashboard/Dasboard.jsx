@@ -4,7 +4,6 @@ import './dashboard.css'
 import { getComment } from "../../services/";
 import { TaskComments } from "../../components/comments/TaskComments";
 import { SearchInput } from "../../settings/SearchInput";
-import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 export const Dashboard = () => {
@@ -103,19 +102,19 @@ export const Dashboard = () => {
                 <br />
                 <div className="card">
                     <span color="white"><a href="https://github.com/hgomez-2022207/Git_101.git">Contactos</a></span>
-                    <button className="card__content" onClick={() => handleSpanClick("Gestor de Hoteles")}>
+                    <button className="card__content" onClick={() => handleSpanClick("Contactos")}>
                         <p>Por medio de html hariamos una pagina que registre los contactos.</p>
                     </button>
                 </div>
                 <div className="card">
                     <span color="white"><a href="https://github.com/hgomez-2022207/PS_Control_Academico.git">Control Academico</a></span>
-                    <button className="card__content" onClick={() => handleSpanClick("Gestor de Hoteles")}>
+                    <button className="card__content" onClick={() => handleSpanClick("Control Academico")}>
                         <p>Una aplicacion que maneje los cursos de los profesores y los estudiantes.</p>
                     </button>
                 </div>
                 <div className="card">
                     <span color="white"><a href="https://github.com/hgomez-2022207/Opinion_Manager.git">Opinion Manager</a></span>
-                    <button className="card__content" onClick={() => handleSpanClick("Gestor de Hoteles")}>
+                    <button className="card__content" onClick={() => handleSpanClick("Opinion Manage")}>
                         <p>Una aplicacion en la cual se harian publicaciones y se darian opiniones.</p>
                     </button>
                 </div>
@@ -128,13 +127,13 @@ export const Dashboard = () => {
                 </div>
                 <div className="card">
                     <span color="white"><a href="https://cetkinal-my.sharepoint.com/:b:/g/personal/hgomez-2022207_kinal_edu_gt/EUq015JdwGNPuL3ucV90YbUB55HuzWNjcymOYtajzmJ40A?e=VBkgsJ">Almacenadora</a></span>
-                    <button className="card__content" onClick={() => handleSpanClick("Gestor de Hoteles")}>
+                    <button className="card__content" onClick={() => handleSpanClick("Almnacenadora")}>
                         <p>Un trabajo en react que almacena la informacion de tareas con sus fechas de inicio y vencimiento.</p>
                     </button>
                 </div>
             </div>
             {!showAddContent && (
-                <SearchInput placeholder="Search comments" onSearch={handleSearch} />
+                <SearchInput placeholder="Search works" onSearch={handleSearch} />
             )}
             {searchValue.trim() === '' ? (
                     <TaskComments comments={comments.com} /> 
