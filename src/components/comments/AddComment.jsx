@@ -2,14 +2,17 @@ import React, { useState } from "react";
 import './AddComment.css'
 import { useComment } from '../../shared/hooks';
 import { Input } from '../../settings/Input.jsx';
+import { useLocation } from "react-router-dom";
 
 export const AddComment = ({}) => {
+    const location = useLocation();
+    const initialText = location.state?.initialText || '';
 
     const { addComment, isLoading } = useComment();
-
+    console.log('add',initialText)
     const [formState, setFormState] = useState({
         name: {
-            value: '',
+            value: initialText,
             isValid: false,
             showError: false
         },
@@ -71,6 +74,7 @@ export const AddComment = ({}) => {
                         onChangeHandler={handleInputValueChange}
                         type='text'
                         onBlurHandler={handleInputValidationOnBlur}
+                        readOnly
                         className="input-field"
                     />
                     <Input
