@@ -97,7 +97,7 @@ export const AddComment = ({}) => {
                     <br />
                     <br />
                     <div className="button-container">
-                        <button className="add-comment-bt" onClick={handleAddComment} disabled={isSubmitButtonDisabled}>
+                        <button className="add-comment-bt" onClick={handleAddComment}>
                             Add Comment
                         </button>
                         <button className="cancel-comment-bt" onClick={handleNavigateStart}>
