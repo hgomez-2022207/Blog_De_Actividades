@@ -8,6 +8,7 @@ export const Input = ({
     validationMessage,
     onBlurHandler,
     textarea,
+    readOnly,
 }) => {
     const handleValueChange = (event) => {
         onChangeHandler(event.target.value, field)
@@ -24,6 +25,7 @@ export const Input = ({
             </div>
             {textarea ? (
                 <textarea
+                    readOnly={readOnly}
                     value={value}
                     onChange={handleValueChange}
                     onBlur={handleInputBlur}
@@ -32,6 +34,7 @@ export const Input = ({
                 />
             ) : (
                 <input
+                    readOnly={readOnly}
                     type={type}
                     value={value}
                     onChange={handleValueChange}
