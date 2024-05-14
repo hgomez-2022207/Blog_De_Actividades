@@ -3,7 +3,7 @@ import { Navbar } from "../../components/navar/Navar";
 import './dashboard.css'
 import { getComment } from "../../services/";
 import { TaskComments } from "../../components/comments/TaskComments";
-import { SearchInput } from "../../settings/CustomInput";
+import { SearchInput } from "../../settings/SearchInput";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
