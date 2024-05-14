@@ -3,6 +3,8 @@ import './TaskComments.css'
 
 export const TaskComments = ({comments}) => {
     console.log('Comentario completo:', comments)
+    const filteredComments = comments.filter(comment => comment.estado !== "false");
+
     return(
         <table className="comment-table">
             <thead>
@@ -12,8 +14,8 @@ export const TaskComments = ({comments}) => {
                 </tr>
             </thead>
             <tbody>
-                {comments && comments.length > 0 ? (
-                    comments.map((comm, index) => (
+                {filteredComments.length > 0 ? (
+                    filteredComments.map((comm, index) => (
                     comm.estado !== "false" && (
                         <tr key={index}>
                             <td>{comm.name}</td>
