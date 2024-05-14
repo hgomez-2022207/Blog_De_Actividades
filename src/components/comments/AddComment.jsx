@@ -76,7 +76,7 @@ export const AddComment = ({}) => {
                 <form className="add-comment-form">
                     <Input
                         field='name'
-                        label='Name of user'
+                        label='Name of work'
                         value={formState.name.value}
                         onChangeHandler={handleInputValueChange}
                         type='text'
