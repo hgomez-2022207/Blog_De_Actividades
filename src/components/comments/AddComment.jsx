@@ -3,10 +3,13 @@ import './AddComment.css'
 import { useComment } from '../../shared/hooks';
 import { Input } from '../../settings/Input.jsx';
 import { useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 
 export const AddComment = ({}) => {
     const location = useLocation();
     const initialText = location.state?.initialText || '';
+    const navigate = useNavigate()
 
     const { addComment, isLoading } = useComment();
     console.log('add',initialText)
@@ -62,6 +65,10 @@ export const AddComment = ({}) => {
     
         }
 
+        const handleNavigateStart = () => {
+            navigate('/')
+        }
+
         const isSubmitButtonDisabled = isLoading || !formState.name.isValid || !formState.comment.isValid
 
         return (
@@ -93,7 +100,7 @@ export const AddComment = ({}) => {
                         <button className="add-comment-bt" onClick={handleAddComment} disabled={isSubmitButtonDisabled}>
                             Add Comment
                         </button>
-                        <button className="cancel-comment-bt" onClick={() => window.location.href = '/dashboard'}>
+                        <button className="cancel-comment-bt" onClick={handleNavigateStart}>
                             Cancel
                         </button>
                     </div>
